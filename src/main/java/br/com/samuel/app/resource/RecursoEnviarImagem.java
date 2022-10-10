@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import br.com.samuel.app.exception.model.FormatoNaoSuportado;
+import br.com.samuel.app.exception.model.ResolucaoNaoSuportada;
 import br.com.samuel.app.model.Imagem;
 import br.com.samuel.app.usecase.EnviarImagem;
 
@@ -21,7 +23,7 @@ public class RecursoEnviarImagem {
     private EnviarImagem upload;
     
     @PostMapping("/upload")
-    public ResponseEntity<Imagem> executar(@RequestParam MultipartFile img) throws IOException {
+    public ResponseEntity<Imagem> executar(@RequestParam MultipartFile img) throws IOException, ResolucaoNaoSuportada, FormatoNaoSuportado {
         return ResponseEntity.status(HttpStatus.CREATED).body(upload.executar(img));
     }
 }
