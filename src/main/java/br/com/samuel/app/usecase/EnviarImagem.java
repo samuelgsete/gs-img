@@ -21,7 +21,7 @@ public class EnviarImagem {
         SalvarImagem.executar(arquivo, nomeRandomico);
         String url = CriarEnderecoEletronico.executar(nomeRandomico);
         Long tamanho = arquivo.getSize();
-        Imagem novaImagem = new Imagem(nomeOriginal, nomeRandomico,url, tamanho, formato, largura, altura);
+        Imagem novaImagem = new Imagem(nomeOriginal, nomeRandomico, url, tamanho, formato, largura, altura);
         return novaImagem;
     }
 }

@@ -13,14 +13,14 @@ import org.springframework.stereotype.Service;
 public class ReceberImagem {
     public ResponseEntity<?> executar(String nomeImg) throws IOException {
         var caminho = Paths.get("imagem/upload/".concat(nomeImg));
-		var arquivo = new File(caminho.toString());
+        var arquivo = new File(caminho.toString());
         var conexaoArquivo = new FileInputStream(arquivo);
-        var img = new  ByteArrayResource(conexaoArquivo.readAllBytes());
+        var img = new ByteArrayResource(conexaoArquivo.readAllBytes());
         conexaoArquivo.close();
-		return ResponseEntity
-                    .ok()
-                    .contentLength(arquivo.length())
-                    .contentType(MediaType.IMAGE_JPEG)
-                    .body(img);
-	}
+        return ResponseEntity
+                .ok()
+                .contentLength(arquivo.length())
+                .contentType(MediaType.IMAGE_PNG)
+                .body(img);
+    }
 }

@@ -21,9 +21,10 @@ public class RecursoEnviarImagem {
 
     @Autowired
     private EnviarImagem upload;
-    
+
     @PostMapping("/upload")
-    public ResponseEntity<Imagem> executar(@RequestParam MultipartFile img) throws IOException, ResolucaoNaoSuportada, FormatoNaoSuportado {
+    public ResponseEntity<Imagem> executar(@RequestParam MultipartFile img)
+            throws IOException, ResolucaoNaoSuportada, FormatoNaoSuportado {
         return ResponseEntity.status(HttpStatus.CREATED).body(upload.executar(img));
     }
 }
