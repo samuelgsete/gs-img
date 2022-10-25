@@ -14,8 +14,7 @@
 	<name>gs-img</name>
 	<description>Microserviço para uploads de imagens</description>
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
- 		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.release>11</maven.compiler.release>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
