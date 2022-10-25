@@ -14,7 +14,7 @@
 	<name>gs-img</name>
 	<description>Microserviço para uploads de imagens</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -61,5 +61,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
