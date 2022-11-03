@@ -15,6 +15,7 @@
 	<description>Microserviço para uploads de imagens</description>
 	<properties>
 		<java.version>11</java.version>
+		<cloudinary.version>1.33.0</cloudinary.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,6 +32,12 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+ 			<groupId>com.cloudinary</groupId>
+    		<artifactId>cloudinary-http44</artifactId>
+    		<version>${cloudinary.version}</version>
 		</dependency>
 
 		<dependency>

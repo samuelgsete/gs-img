@@ -1,5 +1,6 @@
 package br.com.samuel.app.resource;
 
+import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,7 +18,7 @@ public class RecursoRemoverImagem {
     private RemoverImagem remover;
 
     @DeleteMapping("upload/{nomeImg}")
-    public ResponseEntity<?> executar(@PathVariable String nomeImg) {
+    public ResponseEntity<?> executar(@PathVariable String nomeImg) throws IOException {
         remover.executar(nomeImg);
         return ResponseEntity.ok().build();
     }
